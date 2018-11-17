@@ -6,3 +6,8 @@
   LongInput:    .asciiz "Input is too long." #String has more than 4 characters - Print Input is too long
   UserInput:    .space  512
 .text
+Error_EmptyInput:
+  la $a0, EmptyInput
+  li $v0, 4
+  syscall
+  j exit
