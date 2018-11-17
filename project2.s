@@ -7,17 +7,22 @@
   UserInput:    .space  512
 .text
 Error_EmptyInput:
-  la $a0, EmptyInput
+  la $a0, EmptyInput #Address of EmptyInput to print
   li $v0, 4
   syscall
   j exit
 Error_InvalidInput:
-  la $a0, InvalidInput
+  la $a0, InvalidInput #Address of Invalid Input to print
   li $v0, 4
   syscall
   j exit
 Error_LongInput:
-  la $a0, LongInput
+  la $a0, LongInput #Address of LongInput to print
   li $v0, 4
   syscall
   j exit
+loopExit:
+  li $v0, 1   
+  add $a0, $zero, $s1  
+  syscall
+  jal exit
