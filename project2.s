@@ -5,4 +5,4 @@
   InvalidInput: .asciiz "Invalid base-33 number." #String includes character not in list - Print invalid base-33 number
   LongInput:    .asciiz "Input is too long." #String has more than 4 characters - Print Input is too long
   UserInput:    .space  512
-  
+.text
